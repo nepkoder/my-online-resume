@@ -1,0 +1,572 @@
+/*------------------------------------------------------------------
+# [Color codes]
+
+# Body  (text): #3a4750
+# Heading Color #444444
+# Theme Color (link color) #82b541
+# Mid grey (sub header) #f4f4f4
+# Background Color #ffffff
+# -------------------------------------------------------------------*/
+
+body {
+	font-family: 'Hind', sans-serif;
+	font-size: 15px;
+	line-height: 1.8em;
+	color: #3d3d50;
+	font-weight: 300;
+	background: #ffffff;
+	overflow-x: hidden;
+
+}
+
+/* --------------------------------------
+ * Global Typography
+ *------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0 0 15px;
+	color: #2b2b3d;
+}
+
+h1 {
+	font-size: 26px;
+	line-height: 1.8em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 1.8em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 16px;
+	line-height: 1.8em;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 15px;
+	line-height: 1.8em;
+	font-weight: 500;
+}
+
+/* --------------------------------------
+ * LINK STYLE
+ *------------------------------------------*/
+
+a {
+	color: #2a54f5;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+a,
+a:active,
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+	color: #2a54f5;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*------------------
+ * Button Style
+ *------------------*/
+
+.btn {
+	padding: 14px 30px 11px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 0;
+	border: 0;
+	text-transform: uppercase;
+}
+
+/*btn-primary*/
+
+.btn-primary {
+	background-color: #2a54f5;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
+	background: #1e3eb5;
+}
+
+/*btn-default*/
+
+.btn-default {
+	color: #2a54f5;
+	background-color: transparent;
+	border: 1px solid #2a54f5;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
+	background: #2a54f5;
+	color: #ffffff;
+	border-color: #2a54f5;
+}
+
+button:focus,
+.btn:focus,
+.btn:active:focus {
+	outline: none;
+}
+
+.btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 20px;
+	padding: 3px 10px;
+	border-radius: 0;
+	/*	display: none;*/
+}
+
+/* --------------------
+ * Column Block
+ * -------------------*/
+
+.columns-block {
+	flex-wrap: wrap;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.blocks {
+	box-sizing: border-box;
+}
+
+.left-col-block {
+	width: 50%;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+}
+
+.right-col-block {
+	width: 50%;
+	position: absolute;
+	right: 0;
+	box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 600px) {
+	.left-col-block {
+		width: 100%;
+		position: relative;
+	}
+
+	.right-col-block {
+		width: 100%;
+		position: relative;
+		box-shadow: none;
+	}
+}
+
+/* --------------------
+ * Section Background
+ * -------------------*/
+
+.gray-bg {
+	background-color: #f9f9f9;
+	/*
+	background: url('../img/skills-bg.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+*/
+}
+
+/* --------------------
+ *  main Wrapper
+ * -------------------*/
+
+#main-wrapper {
+	background: #ffffff;
+	overflow: hidden;
+}
+
+/*-------------------
+ * Section Wrapper
+ *-------------------*/
+
+.section-wrapper {
+	padding: 36px;
+}
+
+@media (max-width: 480px) {
+	.section-wrapper {
+		padding: 30px 20px;
+	}
+}
+
+/*---------------------------
+* Section Title
+*---------------------------*/
+
+/* headline in span12 in bootstrap */
+
+.headline {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #252525;
+	margin-bottom: 32px;
+	color: #252525;
+	line-height: 20px;
+	text-align: center;
+}
+
+.headline h1 {
+	padding: 10px 15px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	line-height: 53px;
+}
+
+.headline p {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	left: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.headline p span {
+	padding: 0 8px;
+	background-color: #fff;
+}
+
+.gray-bg .headline p span {
+	background-color: #f9f9f9;
+}
+
+.resume-btn .btn-download-resume {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.resume-btn .btn-touch {
+	margin-bottom: 10px;
+}
+
+.intro {
+	text-align: justify;
+}
+
+/*-----------------------------
+ * NAVIGATION & HEADER STYLE
+ *-------------------------------*/
+
+.header {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	vertical-align: middle;
+	position: relative;
+}
+
+.header .profile-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/profile.jpg);
+	background-size: cover;
+	background-position: center top;
+}
+
+.header .profile-img:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient( -30deg,
+	rgba(42, 84, 245, 0.5) 0%,
+	rgba(42, 84, 245, 0.5) 40%,
+	transparent 60%,
+	transparent 100%);
+
+}
+
+.header .content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10%;
+}
+
+.header .content h1 {
+	font-size: 36px;
+	color: #ffffff;
+	line-height: 1;
+	margin: 0;
+}
+
+.header .content p {
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.header .btn {
+	margin-top: 40px;
+}
+
+.header .content .social-icon {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.header .content .social-icon li {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.header .content .social-icon li a {
+	display: block;
+	font-size: 12px;
+	color: #ffffff;
+	width: 34px;
+	height: 34px;
+	line-height: 33px;
+	text-align: center;
+	border-radius: 100%;
+	border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.header .content .social-icon li a:hover {
+	border-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+	.header .profile-img {
+		z-index: 1;
+	}
+
+	.header .content {
+		z-index: 2;
+	}
+}
+
+/*-------------------
+ * Skills Progressbar
+ *-------------------*/
+
+.progress-item {
+	position: relative;
+}
+
+.progress-item .progress-title {
+	font-size: 15px;
+	font-weight: 400;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.progress-item .progress {
+	height: 5px;
+	box-shadow: none;
+	border-radius: 5px;
+}
+
+.progress-item .progress-bar {
+	background-color: #2a54f5;
+	box-shadow: none;
+	text-align: right;
+}
+
+.progress-item .progress-percent {
+	font-size: 12px;
+	background-color: #313131;
+	position: absolute;
+	top: 5px;
+	padding: 0 8px;
+	border-radius: 3px;
+}
+
+.progress-item .progress-percent::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	border-top: 6px solid #313131;
+	border-right: 8px solid transparent;
+}
+
+/* hobbits and interests items styling */
+
+.item-icon {
+	/*	margin-bottom: 10px;*/
+	display: inline-block;
+}
+
+.item-icon i {
+	font-size: 23px;
+	border: 1px solid #2a54f5;
+	padding: 13px;
+	box-shadow: none;
+
+	/*	color: #2a54f5;*/
+	/*		line-height: 10px; */
+}
+
+.item-icon:hover,
+.item-icon:visited {
+	background-color: #2a54f5;
+	/*	border-radius: 50%;*/
+	color: #fff;
+	/*	border: 1px solid #2a54f5;*/
+	transition: all, 0.5s;
+
+}
+
+.divider-intro {
+	width: 75%;
+	height: 3px;
+	/*		padding: 0px auto;*/
+	margin: -10px auto 10px;
+	;
+	float: center;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0.3;
+}
+
+
+/*-------------------
+ * Content Item for education section
+ *-------------------*/
+
+.divider-edu {
+	width: 3px;
+	height: 320px;
+	margin: 0px auto;
+	float: left;
+	position: absolute;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.content-item {
+	margin-left: 15px;
+}
+
+.content-item h3 {
+	margin: 0 0 7px;
+	line-height: 1;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.content-item h4 {
+	margin: 0;
+	line-height: 1;
+}
+
+.content-item small {
+	color: #888888;
+	font-size: 14px;
+}
+
+/*-------------------
+ * Contact
+ *-------------------*/
+
+.feedback-form {
+	margin-top: 8px;
+}
+
+.section-contact i {
+	font-size: 28px;
+}
+
+/*-------------------
+ * Form Style
+ *-------------------*/
+
+.form-control {
+	height: 50px;
+	padding: 0 20px;
+	font-size: 14px;
+	line-height: 50px;
+	color: #969595;
+	border: 1px solid #cccccc;
+	border-radius: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+.form-control:focus,
+.form-control:active {
+	box-shadow: none;
+}
+
+/* --------------------------------------------
+ *   Footer
+ *---------------------------------------------- */
+
+/* Copyright */
+
+.footer {
+	padding: 30px 50px;
+}
+
+.footer .copyright-section {
+	font-size: 13px;
+	color: #888888;
+
+}
+
+.footer .copyright-section .copytext {
+	font-weight: 400;
+	display: block;
+}
+
+@media (max-width: 480px) {
+	.footer {
+		padding: 10px 20px;
+	}
+}
