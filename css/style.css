@@ -147,7 +147,13 @@ button:focus,
 	font-size: 20px;
 	padding: 3px 10px;
 	border-radius: 0;
+
 	/*	display: none;*/
+}
+
+.btn-back-to-top:hover {
+	border-radius: 50%;
+	transition: all 0.4s;
 }
 
 /* --------------------
@@ -280,8 +286,21 @@ button:focus,
 	margin-bottom: 10px;
 }
 
+.resume-btn .btn-download-resume:hover {
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	transition: all 0.4s ease-in;
+}
+
 .resume-btn .btn-touch {
 	margin-bottom: 10px;
+}
+
+.resume-btn .btn-touch:hover,
+.resume-btn .btn-touch:visited {
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+	transition: all 0.4s ease-in;
 }
 
 .intro {
@@ -455,10 +474,10 @@ button:focus,
 .item-icon:hover,
 .item-icon:visited {
 	background-color: #2a54f5;
-	/*	border-radius: 50%;*/
 	color: #fff;
-	/*	border: 1px solid #2a54f5;*/
-	transition: all, 0.5s;
+	transform: rotate(360deg);
+	transition: all, 0.7s ease-in;
+	cursor: pointer;
 
 }
 
@@ -474,6 +493,92 @@ button:focus,
 	opacity: 0.3;
 }
 
+/* services section */
+
+.service-area {
+	margin-top: 20px;
+}
+
+.service-wrap {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 25px 35px;
+	position: relative;
+	transition: all 0.5s ease 0s;
+	z-index: 9;
+	margin-top: 10px;
+}
+
+.service-wrap::before,
+.service-wrap::after {
+	content: "";
+	height: 300%;
+	position: absolute;
+	transform: rotate(45deg);
+	width: 120%;
+	z-index: -9;
+	transition: all 0.5s;
+	opacity: 0;
+	background: #2a54f5;
+}
+
+.service-wrap::before {
+	top: -37px;
+	left: 100%;
+}
+
+.service-wrap::hover:before {
+	left: -27px;
+	opacity: 1;
+}
+
+.service-wrap::after {
+	right: 100%;
+	bottom: -37px;
+}
+
+.service-wrap:hover:after {
+	right: -27px;
+	opacity: 1;
+}
+
+.service-wrap:hover {
+	color: white;
+}
+
+.service-wrap:h3 {
+	color: white;
+}
+
+.service-wrap:hover h3 {
+	color: white;
+}
+
+.service-wrap:hover h3:after {
+	background-color: white;
+}
+
+.service-icon i {
+	font-size: 30px;
+	margin-bottom: 10px;
+	transition: all 0.5s;
+}
+
+.service-wrap:hover .service-icon i {
+	transform: rotate(360deg);
+}
+
+.service-wrap h3 {
+	font-size: 23px;
+	font-weight: 600;
+	/*	padding-bottom: 15px;*/
+	position: relative;
+}
+
+.service-wrap p {
+	font-size: 15px;
+	margin-bottom: 0;
+}
 
 /*-------------------
  * Content Item for education section
@@ -543,6 +648,38 @@ button:focus,
 .form-control:active {
 	box-shadow: none;
 }
+
+.social-icon-bottom {
+	padding: 5px 35px 5px 35px;
+	text-align: center;
+}
+
+.social-icon-bottom a {
+	margin: 0 10px 20px 10px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+}
+
+.social-section .fa {
+	font-size: 28px;
+	/*	color: deepskyblue;*/
+	width: 60px;
+	height: 60px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background: white;
+	line-height: 2;
+	border: 2px solid #34495e;
+	text-align: center;
+	transition: all 0.7s ease-in;
+}
+
+.social-icon-bottom a:hover .fa {
+	border: 2px solid blue;
+	transform: rotate(360deg);
+}
+
 
 /* --------------------------------------------
  *   Footer
